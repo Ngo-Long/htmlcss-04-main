@@ -7,14 +7,8 @@
     background: #fffaf5;
 }
 .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding-top: 26px;
 }
@@ -404,6 +398,7 @@
 .about__image {
     position: relative;
     width: 636.63px;
+    max-width: 100%;
     height: 559px;
 }
 
@@ -700,6 +695,7 @@
 .service-image {
     position: relative;
     width: 440px;
+    max-width: 100%;
     padding-top: 17px;
     margin: 0 auto;
 }

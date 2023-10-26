@@ -35,38 +35,84 @@
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- header -->
+    <!-- PC header -->
     <header class="fixed-header">
         <div class="grid wide">
             <nav class="nav">
+                <!-- table/mobile menu -->
+                <label for="menuCheckbox" class="toggle-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </label>
+
                 <a href="#" class="nav__logo">
                     <img src="./assets/icon/Logo-lucy.svg" alt="Lucy" class="logo-img">
                 </a>
-                <ul class="nav__list">
+
+                <!-- navigation -->
+                <ul class="nav__list" id="pc__nav">
                     <li class="nav__item">
                         <a href="#" class="nav__link">Home</a>
                     </li>
+
                     <li class="nav__item">
                         <a href="#about" class="nav__link">About</a>
                     </li>
+
                     <li class="nav__item">
                         <a href="#services" class="nav__link">Services & Rates</a>
                     </li>
+
                     <li class="nav__item">
                         <a href="#reviewa" class="nav__link">Reviewa</a>
                     </li>
+
                     <li class="nav__item">
                         <a href="#blog" class="nav__link">Contacts us</a>
                     </li>
+
+                    <li class="nav__item separate show-on-mobile">
+                        <a href="#!" class="nav__link">Sign in</a>
+                    </li>
+
+                    <li class="nav__item show-on-mobile">
+                        <a href="#!" class="nav__link">Sign up</a>
+                    </li>
                 </ul>
+
                 <div class="nav__button">
                     <a class="nav__btn--link btn btn-none" href="#!">Sign in</a>
                     <button class="nav__btn btn btn-none">Sign up</button>
                 </div>
             </nav>
+        </div>
+
+    </header>
+
+    <!-- table/mobile header -->
+    <header class="mobile-header">
+        <input type="checkbox" name="menuCheckbox" id="menuCheckbox" class="menu-checkbox" hidden>
+
+        <!-- overplay -->
+        <label for="menuCheckbox" class="menu-overplay"></label>
+
+        <!-- menu content -->
+        <div class="menu-drawer">
+            <a href="#" class="nav__logo">
+                <img src="./assets/icon/Logo-lucy.svg" alt="Lucy" class="logo-img">
+            </a>
+
+            <ul id="mobile__nav" class="nav__list nav__list--mobile">
+                <!-- copy pc qua mobile -->
+            </ul>
         </div>
     </header>
 
@@ -85,7 +131,7 @@
 
                     <figure class="hero__image hero__img--fit">
                         <img src="./assets/icon/concho.png" alt="Established & Trusted Pet Care Service"
-                            class="hero__img">
+                            class="hero__img ">
                     </figure>
 
                     <div class="hero-wrap__text">
@@ -114,8 +160,10 @@
                 </div>
 
                 <section class="hero-block__text">
-                    <h1 class="hero__heading">Established & Trusted Pet Care Service</h1>
-                    <p class="hero__desc">Discover a wide variety of Pawsitive services to choose from, including
+                    <h1 class="hero__heading">Established & Trusted Pet Care Service
+                    </h1>
+                    <p class="hero__desc">Discover a wide variety of Pawsitive
+                        services to choose from, including
                         daycare, private walks, office duty and spa.</p>
                     <div class="hero__block__btn">
                         <div class="hero__btn btn btn--primary">
@@ -184,7 +232,7 @@
                 <section class="featurn-body half">
                     <figure class="featurn__image">
                         <img src="./assets/img/2-chu-cho.png" alt="Taking A Vacation? So Is Your Pet."
-                            class="featurn__img">
+                            class="featurn__img" data-aos="fade-up">
                         <img src="./assets/icon/decor-2.svg" alt="" class="decor featurn__decor">
                         <img src="./assets/icon/decor-3.svg" alt="" class="decor featurn__decor">
                         <img src="./assets/icon/decor-4.svg" alt="" class="decor featurn__decor">
@@ -201,12 +249,12 @@
                         <ul class="featurn__list">
                             <li class="featurn__item">
                                 <img src="./assets/icon/Pet_Boarding.svg" alt="Pet Boarding"
-                                    class="featurn__icon featurn__icon-1">
+                                    class="featurn__icon featurn__icon-1" data-aos="zoom-in-up">
                                 <span class="featurn__name">Pet Boarding</span>
                             </li>
                             <li class="featurn__item">
                                 <img src="./assets/icon/Pet_Daycare.svg" alt="Pet Daycare"
-                                    class="featurn__icon featurn__icon-2">
+                                    class="featurn__icon featurn__icon-2" data-aos="zoom-in-up">
                                 <span class="featurn__name">Pet Daycare</span>
                             </li>
                             <li class="featurn__item">
@@ -228,8 +276,10 @@
             <div class="grid wide">
                 <section class="service__top">
                     <p class="service__desc">What we do for you?</p>
+
                     <h2 class="heading">Our Services</h2>
                 </section>
+
                 <div class="service__row">
                     <div class="service__col">
                         <article class="service__list">
@@ -260,13 +310,15 @@
                             </a>
                         </article>
                     </div>
-                    <div class="service__col">
+
+                    <div class="service__col ">
                         <figure class="service-image">
                             <img src="./assets/img/con-meo.png" alt="Cat" class="service__img">
                             <div class="service__picture"></div>
                         </figure>
                         <button class="service__btn btn btn--while">View All Services</button>
                     </div>
+
                     <div class="service__col">
                         <article class="service__list">
                             <h5 class="service__heading">Puppy Sitting</h5>
@@ -296,6 +348,14 @@
                             </a>
                         </article>
                     </div>
+                </div>
+
+                <div class="service__col hide-on-pc">
+                    <figure class="service-image">
+                        <img src="./assets/img/con-meo.png" alt="Cat" class="service__img">
+                        <div class="service__picture"></div>
+                    </figure>
+                    <button class="service__btn btn btn--while">View All Services</button>
                 </div>
             </div>
         </section>
@@ -459,8 +519,7 @@
                 <div class="blog__top">
                     <h2 class="blog__heading heading">Our Blog</h2>
                     <div class="blog__top-wrap">
-                        <div class="blog__top-desc">Stay up to date with the latest
-                            tech trands and news in the pets.</div>
+                        <div class="blog__top-desc">Stay up .</div>
                         <button class="btn btn--while blog__top-btn">View All Blog</button>
                     </div>
                 </div>
@@ -583,8 +642,13 @@
                 </div>
             </div>
         </div>
-
     </footer>
+
+    <script src="./assets/js/home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
